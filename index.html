@@ -6,7 +6,37 @@
 
 <h1>Prideopoly</h1>
 
-<button type="button" onclick="alert('Get out of a reading slump free card - keep this incase you end up in a slump!')">Button Unicorn</button>
+<!-- <button type="button" onclick="alert('Get out of a reading slump free card - keep this incase you end up in a slump!')">Button Unicorn</button> -->
  
+<p id="randomText">Rainbows and Unicorns</p>
+<button onclick="generateRandomText()">Unicorn Button</button>
+
+<script>
+    function generateRandomText() {
+        const textArray = [
+            "Third place in the local drag show! Collect £20",
+            "Found your community, go directly to \"coming out\" and collect £200 ",
+            "Supported a queer bookshop, collect £20 ",
+            "Tripped on your Pride flag, lose £5 ",
+            "Write a queer book and a publisher picks it up, collect £100 ",
+            "Forgot to drink water (no, coffee doesn't count), lose 10p ",
+            "Gay speed - your next dice throw gives you double ",
+            "Whoops, your gaydar is off and you ask out a straight person, go back three spaces ",
+            "Got a blahaj, move forward two spaces",
+            "Blocked a terf on social media, go forward three spaces ",
+            "Get out of a reading slump free card - keep this incase you end up in a slump! ",
+            "Finally got off the waiting list for NHS gender-affirming care, move to a spot of your choice on the board",
+            "Veto card - this card lets you veto a spot you land on at any point and roll again",
+            "Used a public restroom at the same time as a trans person. Nothing happens, roll again."
+        ];
+
+        const randomIndex = Math.floor(Math.random() * textArray.length);
+        const randomText = textArray[randomIndex];
+
+        document.getElementById("randomText").textContent = randomText;
+    }
+</script>
+
+
 </body>
 </html>
