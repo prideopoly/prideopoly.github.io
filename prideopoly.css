@@ -13,9 +13,12 @@ p {
     text-align: center;
     background-color: white;
 }
-button {
+div {
     text-align: center;
 }
 .h1{
+    font-family: "Avenir Next", Helvetica, sans-serif;
+}
+.p1{
     font-family: "Avenir Next", Helvetica, sans-serif;
 }
