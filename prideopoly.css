@@ -55,10 +55,10 @@ button:active .btnBox {
 }
 .btnFront {
   background-image: url('/img/QCC_front.svg');
-  /* background-size: cover; */
+  background-size: cover;
 }
 .btnBack {
   background-image: url('/img/QCC_back.svg');
-  /* background-size: cover; */
+  background-size: cover;
   transform: rotateY(180deg);
 }
