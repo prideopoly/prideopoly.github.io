@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head><link rel="stylesheet" href="prideopoly.css"></head>
+<head>
+    <link rel="stylesheet" href="prideopoly.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
     
 <body>
 
 <h1 class="h1">Prideopoly</h1>
-
-<!-- <button type="button" onclick="alert('Get out of a reading slump free card - keep this incase you end up in a slump!')">Button Unicorn</button> -->
  
-<p class="p1" id="randomText">Rainbows and Unicorns</p>
-<div class="b1"><button onclick="generateRandomText()">Unicorn Button</button></div>
+<!-- <p class="p1" id="randomText">Rainbows and Unicorns</p>
+<div class="b1"><button onclick="generateRandomText()">Unicorn Button</button></div> -->
+
+<input type="checkbox" onchange="generateRandomText()" id="cardControl"/>
+<label class="card" for="cardControl"></label>
 
 <script>
     function generateRandomText() {
