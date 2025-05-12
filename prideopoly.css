@@ -26,7 +26,7 @@ div {
     font-family: "Avenir Next", Helvetica, sans-serif;
 }
 
-.btn {
+button {
   width: 200px;
   height: 300px;
   font-size: 24px;
@@ -42,7 +42,7 @@ div {
   transform-style: preserve-3d;
 }
 
-.btn:active .btnBox{
+button:active .btnBox {
   transform: rotateY(180deg);
 }
 
