@@ -33,3 +33,7 @@ button {
   height: 300px;
   font-size: 24px;
 }
+
+.btnFlip:active {
+  transform: rotateY(180deg);
+}
