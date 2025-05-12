@@ -42,7 +42,7 @@ div {
   transform-style: preserve-3d;
 }
 
-.btn:active {
+.btn:active .btnBox {
   transform: rotateY(180deg);
 }
 
