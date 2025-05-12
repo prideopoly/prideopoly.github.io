@@ -66,9 +66,11 @@ body { font-family: sans-serif; }
 
 .cardFront {
   background-image: url('/img/QCC_front.svg');
+  background-size: cover;
 }
 
 .cardBack {
   background-image: url('/img/QCC_back.svg');
+  background-size: cover;
   transform: rotateY(180deg);
 }
