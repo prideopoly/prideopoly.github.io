@@ -42,7 +42,7 @@ div {
   transform-style: preserve-3d;
 }
 
-.btn:active .btnBox {
+.btn:active .btnBox{
   transform: rotateY(180deg);
 }
 
@@ -60,5 +60,5 @@ div {
 .btnBack {
   background-image: url('/img/QCC_back.svg');
   /* background-size: cover; */
-  /* transform: rotateY(180deg); */
+  transform: rotateY(180deg);
 }
