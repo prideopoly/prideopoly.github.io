@@ -17,7 +17,7 @@
 <div class="scene">
     <div class="card">
       <div class="cardBox cardFront"></div>
-      <div class="cardBox cardBack"><p class="p1" id="randomText"></p></div>
+      <div class="cardBox cardBack"><input type="checkbox" onchange="generateRandomText()" id="cardControl"/><p class="p1" id="randomText"></p></div>
     </div>
   </div>
 
@@ -26,21 +26,88 @@
 
 <script>
     function generateRandomText() {
+        // TO-DO read from file
         const textArray = [
-            "Third place in the local drag show! Collect £20",
-            "Found your community, go directly to \"coming out\" and collect £200 ",
-            "Supported a queer bookshop, collect £20 ",
-            "Tripped on your Pride flag, lose £5 ",
-            "Write a queer book and a publisher picks it up, collect £100 ",
-            "Forgot to drink water (no, coffee doesn't count), lose 10p ",
-            "Gay speed - your next dice throw gives you double ",
-            "Whoops, your gaydar is off and you ask out a straight person, go back three spaces ",
-            "Got a blahaj, move forward two spaces",
-            "Blocked a terf on social media, go forward three spaces ",
-            "Get out of a reading slump free card - keep this incase you end up in a slump! ",
-            "Finally got off the waiting list for NHS gender-affirming care, move to a spot of your choice on the board",
-            "Veto card - this card lets you veto a spot you land on at any point and roll again",
-            "Used a public restroom at the same time as a trans person. Nothing happens, roll again."
+            "1. You and your friends celebrated International Lesbian Visibility Day (26 April), collect £50.",
+            "2. Third place in the local drag show! Collect £10.",
+            "3. Found your community, go directly to \"coming out\" and collect £200.",
+            "4. You and your friends celebrated International Asexuality Day (6 April), collect £50.",
+            "5. Supported a queer bookshop, collect £20.",
+            "6. The cafe was out of oat milk, move back 1 space.",
+            "7. You and your friends celebrated Pansexual/Panromantic Visibility Day (24 May), collect £50.",
+            "8. Tripped on your Pride flag, lose £5.",
+            "9. Write a queer book and a publisher picks it up, collect £100.",
+            "10. You and your friends celebrated Aromantic Awareness Week (12-24 February), collect £50.",
+            "11. Forgot to drink water (no, coffee doesn't count), lose £10.",
+            "12. Gay speed: your next dice throw gives you double.",
+            "13. You and your friends celebrated Omnisexual Awareness Day (21 March), collect £50.",
+            "14. You got your hair dyed professionally and it looks amazing. Pay £50 but go forward two spaces.",
+            "15. Whoops, your gaydar is off and you ask out a straight person, go back 3 spaces.",
+            "16. You and your friends celebrated Queer History Month, collect £100.",
+            "17. Got a blåhaj, move forward 2 spaces.",
+            "18. Your favourite Queer bookshop has a sale on! Collect £20.",
+            "19. You and your friends celebrated International Transgender Day of Visibility (31 March), collect £50.",
+            "20. Blocked a TERF on social media, go forward 3 spaces.",
+            "21. Get out of a reading slump free card - keep this in case you end up in a slump!",
+            "22. You and your friends celebrated International Day Against Homophobia, Biphobia, and Transphobia (IDAHOBIT) (17 May), collect £50.",
+            "23. Finally got off the waiting list for NHS gender-affirming care, move to the next social media square.",
+            "24. Veto card - this card lets you veto a spot you land on at any point and roll again.",
+            "25. Used a public toilet at the same time as a trans person. Nothing happens, roll again.",
+            "26. You and your friends celebrated Agender Pride Day (19 May), collect £50.",
+            "27. Wardrobe malfunction at Pride, move back 1 space.",
+            "28. Late to a gay event and had to pay for parking, lose £20.",
+            "29. You and your friends celebrated Omnisexual Visibility Day (6 July), collect £50.",
+            "30. You found a favorite queer read at the airport, move forward 1 space.",
+            "31. Your queer indie book went viral on Booktok and you got a slew of orders, collect £100.",
+            "32. You bought a “Protect Trans Kids” shirt, collect £20.",
+            "33. You and your friends celebrated Nonbinary People's Day (14 July), collect £50.",
+            "34. Got tickets for filming of the new season of Drag Race! Collect £50.",
+            "35. The council gave you planning permission to put a big Pride flag up in your garden! Move forward two spaces.",
+            "36. You and your friends celebrated International Drag Day (16 July), collect £50.",
+            "37. You came out to your bestie and they were super supportive, roll again.",
+            "38. First day on HRT and you feel amazing, go directly to “coming out” and collect £200.",
+            "39. You attended a queer lecture about aromantic-spec identities, move forward 2 spaces.",
+            "40. You and your friends celebrated Wear it Purple Day (30 August), collect £50.",
+            "41. You read a queer history book, collect £10.",
+            "42. Finished second place in karaoke, move back 1 space.",
+            "43. You and your friends celebrated Bisexual/Biromantic Visibility Day (23 September), collect £50.",
+            "44. You bet your friend you could finish a book before them, but didn’t, lose £20.",
+            "45. Bought a lavender iced oatmilk latte, lose £5.",
+            "46. You and your friends celebrated International Lesbian Day (8 October), collect £50.",
+            "47. Your short story is being published in a queer writers' anthology! Collect £50.",
+            "48. A corporate sponsor dropped out of the Pride fundraiser, you and your community doubled their pledged contribution. Collect £200.",
+            "49. You touched grass, collect £5.",
+            "50. You and your friends celebrated International Pronouns Day (16 October), collect £50.",
+            "51. The bathroom line is very long, you start chatting up the person next to you. You got makeup AND workout tips while waiting in line together, move forward 1 space.",
+            "52. Supported a queer owned bookstore instead of a corporate giant, move forward 1 space.",
+            "53. You and your friends celebrated Asexual Awareness Week (20-26 October), collect £50.",
+            "54. Attended a queer wedding, collect £50.",
+            "55. Libro FM had your anticipated audiobook as an ALC, move forward 2 spaces.",
+            "56. Someone compliments your new haircut, gender euphoria, collect £30.",
+            "57. You and your friends celebrated Intersex Awareness Day (26 October), collect £50.",
+            "58. Dropped your garlic bread, move back 2 spaces.",
+            "59. You are 15 minutes late with an iced oat latte. Pay £5 and move back 1 space.",
+            "60. You are glowing, immaculate face. Collect £20.",
+            "61. You and your friends observed Transgender Day of Remembrance (20 November), collect £50.",
+            "62. The drag community has adopted you, collect £20.",
+            "63. New friends invite you to the Pride after party, collect £20.",
+            "64. You're still figuring yourself out. The community is here for you when you're ready, roll again.",
+            "65. You and your friends observed Intersex Day of Remembrance (8 November), collect £50.",
+            "66. You meet someone cute AND they're queer! Move forward 1 space.",
+            "67. You attended a queer lecture about asexual-spec identities, move forward 2 spaces.",
+            "68. You and your friends observed World AIDS Day (1 December), collect £50.",
+            "69. Attend a rally for queer rights, move forward two spaces.",
+            "70. Veto card - this card lets you veto a spot you land on at any point and roll again.",
+            "71. You and your friends celebrated Pansexual & Panromantic Pride Day (8 December), collect £50.",
+            "72. Get out of a reading slump free card - keep this incase you end up in a slump!",
+            "73. Someone uses the correct pronouns for you, gender euphoria, collect £10.",
+            "74. You walked through the Pride parade route while the parade was in action, reckless behaviour, lose £25.",
+            "75. You and your friends celebrated Human Rights Day(10 December), collect £50.",
+            "76. Your pet loves your new partner - immaculate vibes. Move forward two spaces.",
+            "77. A rainbow appears in the sky as you are on your way home. Positive vibes - collect £5.",
+            "78. A new special edition run of ALL the sapphic trifecta has been announced. You're definitely preordering them. Lose £100 but move forward 2 spaces.",
+            "79. You remembered to drink all of your water! Collect £10.",
+            "80. You are invited to a Queer book festival to meet all your favourite creators and writers! Go to \"coming out\" and collect £200."
         ];
 
         const randomIndex = Math.floor(Math.random() * textArray.length);
@@ -50,7 +117,7 @@
     }
     var cards = document.querySelectorAll('.card');
     [...cards].forEach((card)=>{
-    card.addEventListener( 'click', function() {
+    card.addEventListener('click', function() {
         card.classList.toggle('flipped');
     });
 });
