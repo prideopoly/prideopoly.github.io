@@ -48,7 +48,7 @@ body { font-family: sans-serif; }
 }
 
 .card.flipped {
-  transform: translateX(-100%) rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
 
 .cardBox {
