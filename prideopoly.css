@@ -43,7 +43,7 @@ body { font-family: sans-serif; }
   height: 100%;
   cursor: pointer;
   transform-style: preserve-3d;
-  transform-origin: center right;
+  transform-origin: center;
   transition: transform 1s;
 }
 
@@ -59,7 +59,7 @@ body { font-family: sans-serif; }
   color: white;
   text-align: center;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 12px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
