@@ -58,12 +58,12 @@ body { font-family: sans-serif; }
 }
 
 .flip-card-front {
-  background-color: white;
+  background-image: url(/img/QCC_front.svg);
+  color: black;
 }
 
 .flip-card-back {
-  background-image: url(/img/QCC_back.svg);
-  color: white;
+  background-color: white;
   transform: rotateY(180deg);
 }
 
