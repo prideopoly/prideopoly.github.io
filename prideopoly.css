@@ -65,7 +65,7 @@ body { font-family: sans-serif; }
   backface-visibility: hidden;
   background-size: cover;
   text-align: center;
-  line-height: 300px;
+  /* line-height: 300px; */
 }
 
 .flip-card-front {
