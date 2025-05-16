@@ -76,3 +76,10 @@ body { font-family: sans-serif; }
   transform: rotateY(180deg);
   color: black
 }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
