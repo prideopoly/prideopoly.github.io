@@ -69,16 +69,16 @@ body { font-family: sans-serif; }
   background-color: white;
   width: 100%;
   color: black;
-  /* width: 200px;
-  height: 300px; */
+  width: 200px;
+  height: 300px;
 }
 
 .flip-card-back {
   background-color: white;
   transform: rotateY(180deg);
   color: black;
-  /* width: 200px;
-  height: 300px; */
+  width: 200px;
+  height: 300px;
 }
 
 .centered {
